@@ -1,0 +1,300 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #2c3e50;
+    scroll-behavior: smooth;
+    font-family: "Cairo", sans-serif;
+    line-height: 27px;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: gray;
+}
+
+header{
+    height: 15%;
+    width: 100%;
+    background-color: #eee;
+}
+
+
+
+
+header nav {
+    padding: 40px 30px 0 30px ;
+    display: flex;
+    justify-content: space-between;
+}
+header nav div{
+    white-space: nowrap;
+    width: 30%;
+}
+
+nav .name h1{
+    font-size: 35px;
+    font-family: "Anta", sans-serif;
+    display: inline-block;
+    width: 180px;
+    border-right: 5px #2c3e50 solid ;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: type steps(11) 5s infinite;
+    
+}
+
+@keyframes type {
+
+    0%{
+        width: 180px;
+    }
+    50%{
+        width: 0px;
+    }
+    100%{
+        width:180px;
+    }
+    
+}
+
+
+header nav .links {
+    flex-grow: 0;
+}
+
+header nav .links ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+nav .links ul li{
+    
+    font-size: 20px;
+    font-weight: 700;
+    transition: all ease 0.2s;
+}
+
+nav .links ul li:hover{
+    color:#95a5a6;
+    font-size: 22px;
+}
+
+nav .links ul li a{
+    transition: all ease 0.2s;
+    text-decoration: none;
+}
+nav .links ul li a:hover{
+    color:black;
+    
+}
+
+
+nav .role {
+    font-size: 22px;
+    margin: 0;
+    text-align: right;
+}
+nav .role h1{
+    display: none;
+    color: #1D1E18;
+    animation: up_down 3s infinite;
+    transition: all 1s ease;
+}
+
+@keyframes up_down {
+    0%{
+        transform: translateY(15px);
+        color: #AAD2BA;
+    }
+    50%{
+        transform: translateY(-35px);
+       
+        color: #6B8F71;
+    }
+    100%{
+        transform: translateY(15px);
+        color: #AAD2BA;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container{
+    padding: 20px ;
+    height: 85%;
+    width: 100%;
+    display: grid;
+    gap: 50px;
+    grid-template-columns: auto auto auto auto;
+    background-color: #eee;
+}
+
+
+.container .profile  {
+    position: relative;
+    background-color: aliceblue;
+    height: auto;
+    border-radius: 50px 15px ;
+    box-shadow: 1px 5px 15px  rgba(0, 0, 0, 0.3) ;
+    overflow: hidden;
+    opacity: 0; /* Initially hide the boxes */
+    animation: slideInRightToLeft 1s ease-in-out forwards; 
+    max-width: 300px;
+}
+@keyframes slideInRightToLeft {
+    0% {
+      transform: translateX(100%);
+      opacity: 0; /* Starting position and opacity */
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1; /* Final position and opacity */
+    }
+}
+
+.container .profile:nth-child(1) {
+    animation-delay: 0s;
+  }
+.container .profile:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+.container .profile:nth-child(3) {
+    animation-delay: 1s;
+  }
+  .container .profile:nth-child(4) {
+    animation-delay: 1.5s;
+  }
+
+
+
+
+
+@keyframes moving {
+    0%{
+        transform: translateX(900px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+    
+}
+
+
+
+
+.profile .profile_header {
+    background-color: #6B8F71;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    
+}
+
+.container .info {
+    border-radius:50px 15px;
+    object-fit: cover;
+}
+.profile .my_image img{
+    background-color: #6B8F71;
+    width: 100%;
+    max-height: 50vh;
+    height: 100%;
+    padding-top: 10px;
+}
+
+.profile .profile_header h1{
+    color:#ecf0f1;
+}
+
+.profile .content
+{
+    padding: 20px;
+}
+
+.profile .content h2
+{
+    padding-bottom: 7px ;
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+    line-height: 30px;
+}
+.profile .content .second_title{
+
+    margin-top: 20px;
+}
+.profile .content h4
+{
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.profile .content li
+{
+    margin-left: 15px;    
+}
+
+.profile .content .social{
+    margin-left: 10px;
+    width:100%;
+    margin-top: 10px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 ;
+}
+
+.profile .content .scroll  {
+    position: sticky;
+    bottom:25px;
+    float: right;
+}
+.profile .content .scroll a{
+    background-color: #6B8F71;
+    border-radius: 50px;
+    padding: 10px 12px;
+    opacity: 0.3;
+    transition: 0.5s all ease;
+    text-decoration: none;
+    color: white;
+}
+
+.profile .content .scroll a:hover {
+    opacity: 1;
+}
+
+
+
